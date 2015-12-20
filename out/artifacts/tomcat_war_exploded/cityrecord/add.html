@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增记录</title>
+</head>
+<body>
+<form action="/cityrecord/save" method="post">
+    <fieldset class="solid">
+        <legend>新增记录</legend>
+        <input type="hidden" name="CityRecord.id" value="${(CityRecord.id)!}" />
+        <div>
+            <label>省文号ID</label>
+            <input type="text" name="CityRecord.ProvinceRfcID" value="${(CityRecord.ProvinceRfcID)!}" />
+        </div>
+        <div>
+            <label>科目ID</label>
+            <input type="text" name="CityRecord.SubjectID" value="${(CityRecord.SubjectID)!}" />
+        </div>
+        <div>
+            <label>项目ID</label>
+            <input type="text" name="CityRecord.ProjectID" value="${(CityRecord.ProjectID)!}" />
+        </div>
+        <div>
+            <label>市ID</label>
+            <input type="text" name="CityRecord.CityID" value="${(CityRecord.CityID)!}" />
+        </div>
+        <div>
+        </div>
+        <div>
+            <label>预算</label>
+            <input type="text" name="CityRecord.Budget" value="${(CityRecord.Budget)!}" />
+        </div>
+        <div>
+            <input type="hidden" name="CityRecord.Cost" value="0" />
+        </div>
+        <div>
+            <label>记录时间</label>
+            <input type="text" readonly="readonly" name="CityRecord.RecordTime" value="${.now?datetime}" />
+        </div>
+        <div>
+            <label>&nbsp;</label>
+            <input value="提交" type="submit">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>

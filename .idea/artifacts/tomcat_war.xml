@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="tomcat:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/tomcat_war</output-path>
+    <root id="archive" name="tomcat_war.war">
+      <element id="artifact" artifact-name="tomcat:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jfinal-2.0-bin-with-src" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

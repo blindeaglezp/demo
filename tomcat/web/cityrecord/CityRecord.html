@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省文号市级记录表</title>
+</head>
+<body>
+<h1><a href="/cityrecord">省文号市级统计表</a></h1>
+<table border="1" title="省文号市级统计表">
+    <td>省文号</td>
+    <td>科目名</td>
+    <td>项目名</td>
+    <td>省本级/市</td>
+    <td>总预算</td>
+    <td>支付数</td>
+    <td>支出进度</td>
+    <td>记录时间</td>
+    <td>省记录</td>
+    <td>县记录</td>
+    <#list recordList as record>
+        <tr>
+            <td><a href="/cityrecord/byprovincerfc/${record.ProvinceRfcID}"> ${record.ProvinceRfcName}</a></td>
+            <td><a href="/cityrecord/bysubject/${record.SubjectID}">${record.SubjectName}</a></td>
+            <td><a href="/cityrecord/byproject/${record.ProjectID}">${record.ProjectName}</a></td>
+            <td><a href="/cityrecord/bycity/${record.CityID}"> ${record.CityName}</a></td>
+            <td>${record.Budget}</td>
+            <td>${record.Cost}</td>
+            <td>${record.Cost/record.Budget + "%"}</td>
+            <td><a href="/cityrecord/byrecordtime/${record.RecordTime}">${record.RecordTime}</a></td>
+            <td><a href="/provincerecord/byprovincerfc/${record.ProvinceRfcID}" >省记录</a></td>
+            <td>县记录</td>
+        </tr>
+    </#list>
+</table>
+</body>
+</html>
